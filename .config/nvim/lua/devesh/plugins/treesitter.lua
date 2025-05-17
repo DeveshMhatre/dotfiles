@@ -41,6 +41,7 @@ return {
 				"gitignore",
 				"vimdoc",
 				"c",
+				"cpp",
 				"ruby",
 				"svelte",
 			},

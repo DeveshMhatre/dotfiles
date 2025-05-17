@@ -38,6 +38,7 @@ return {
 				"solargraph",
 				"rust_analyzer",
 				"svelte",
+				"clangd",
 			},
 		})
 
