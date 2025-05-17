@@ -13,7 +13,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 alias vim=nvim
-alias tmux="tmux -u"
+alias tmux="tmux -u new-session \; set-option -g status-right ''"
 alias yrs="yarn run start"
 alias start-rails="RUBYOPT='-W0' rails server"
 alias test-ruby="bundle exec rspec"
