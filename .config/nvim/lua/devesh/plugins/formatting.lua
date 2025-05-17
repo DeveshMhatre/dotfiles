@@ -1,14 +1,21 @@
-local path_is_included = function()
-	local path_to_match = "/home/dev/Projects/Work/skymdbackend"
-	local current_path = vim.fn.getcwd()
-
-	return path_to_match ~= current_path
-end
+vim.api.nvim_create_user_command("ToggleFormatOnSave", function(args)
+	if args.bang then
+		-- FormatDisable! will disable formatting just for this buffer
+		vim.b.disable_autoformat = not vim.b.disable_autoformat
+		print("Format on save is now " .. (vim.b.disable_autoformat and "enabled" or "disabled"))
+	else
+		vim.g.disable_autoformat = not vim.g.disable_autoformat
+		print("Format on save is now " .. (vim.g.disable_autoformat and "enabled" or "disabled"))
+	end
+end, {
+	desc = "Toggle autoformat-on-save",
+	bang = true,
+})
 
 return {
 	"stevearc/conform.nvim",
 	event = { "BufReadPre", "BufNewFile" },
-	enabled = path_is_included,
+	enabled = true,
 	config = function()
 		local conform = require("conform")
 
@@ -28,19 +35,13 @@ return {
 				lua = { "stylua" },
 				python = { "isort", "black" },
 			},
-			format_on_save = {
-				lsp_fallback = true,
-				async = false,
-				timeout_ms = 1000,
-			},
+			format_after_save = function(bufnr)
+				-- Disable with a global or buffer-local variable
+				if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+					return
+				end
+				return { timeout_ms = 1000, lsp_format = "fallback", async = true }
+			end,
 		})
-
-		vim.keymap.set({ "n", "v" }, "<leader>mp", function()
-			conform.format({
-				lsp_fallback = true,
-				async = false,
-				timeout_ms = 1000,
-			})
-		end, { desc = "Format file or range (in visual mode)" })
 	end,
 }

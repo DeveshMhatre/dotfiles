@@ -112,11 +112,6 @@ return {
 			["eslint"] = function()
 				lspconfig["eslint"].setup({
 					capabilities = capabilities,
-					settings = {
-						experimental = {
-							useFlatConfig = true,
-						},
-					},
 				})
 			end,
 		})
