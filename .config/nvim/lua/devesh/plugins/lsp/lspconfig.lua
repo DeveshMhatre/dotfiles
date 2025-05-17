@@ -113,8 +113,25 @@ return {
 							completion = {
 								callSnippet = "Replace",
 							},
+							telemetry = {
+								enable = false,
+							},
 						},
 					},
+				})
+			end,
+			["rubocop"] = function()
+				-- configure lua server (with special settings)
+				lspconfig["rubocop"].setup({
+					cmd = { "rubocop", "--lsp" },
+					root_dir = lspconfig.util.root_pattern("Gemfile", ".git", "."),
+				})
+			end,
+			["solargraph"] = function()
+				-- configure lua server (with special settings)
+				lspconfig["solargraph"].setup({
+					cmd = { "solargraph", "stdio" },
+					root_dir = lspconfig.util.root_pattern("Gemfile", ".git", "."),
 				})
 			end,
 			["eslint"] = function()
