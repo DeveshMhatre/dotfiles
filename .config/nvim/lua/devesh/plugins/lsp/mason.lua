@@ -55,6 +55,7 @@ return {
 				"pylint",
 				"eslint",
 				"rubocop",
+				"erb-formatter",
 			},
 		})
 	end,

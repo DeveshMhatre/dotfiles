@@ -34,6 +34,8 @@ return {
 				liquid = { "prettier" },
 				lua = { "stylua" },
 				python = { "isort", "black" },
+				eruby = { "erb-formatter" },
+				ruby = { "rubocop" },
 			},
 			format_after_save = function(bufnr)
 				-- Disable with a global or buffer-local variable

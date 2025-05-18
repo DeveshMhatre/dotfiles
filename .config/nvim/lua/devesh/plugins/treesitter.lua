@@ -5,6 +5,7 @@ return {
 	build = ":TSUpdate",
 	dependencies = {
 		"windwp/nvim-ts-autotag",
+		"RRethy/nvim-treesitter-endwise",
 	},
 	config = function()
 		-- import nvim-treesitter-plugin
@@ -15,6 +16,9 @@ return {
 			highlight = {
 				enable = true,
 			},
+
+			-- enable endwise for ruby
+			endwise = { enable = { "ruby" } },
 
 			-- enable indentation
 			indent = { enable = true },
