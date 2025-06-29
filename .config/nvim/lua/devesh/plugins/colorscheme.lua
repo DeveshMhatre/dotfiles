@@ -1,7 +1,9 @@
 return {
-	"pineapplegiant/spaceduck",
+	"bluz71/vim-nightfly-colors",
+	name = "nightfly",
+	lazy = false,
 	priority = 1000,
 	config = function()
-		vim.cmd("colorscheme spaceduck")
+		vim.cmd("colorscheme nightfly")
 	end,
 }
