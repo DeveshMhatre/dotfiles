@@ -21,6 +21,10 @@ return {
 			default = { "lsp", "path", "snippets", "buffer" },
 		},
 		fuzzy = { implementation = "prefer_rust_with_warning" },
+		enabled = function()
+			local disabled_filetypes = { "NvimTree", "DressingInput" }
+			return not vim.tbl_contains(disabled_filetypes, vim.bo.filetype)
+		end,
 	},
 	opts_extend = { "sources.default" },
 }
