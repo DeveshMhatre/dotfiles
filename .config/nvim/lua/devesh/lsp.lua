@@ -9,4 +9,4 @@ vim.diagnostic.config({
 	},
 })
 
-vim.lsp.enable({ "lua_ls", "rubocop", "ruby_lsp", "rust_analyzer", "stylua", "vtsls" })
+vim.lsp.enable({ "clangd", "lua_ls", "rubocop", "ruby_lsp", "rust_analyzer", "stylua", "vtsls" })

@@ -6,7 +6,7 @@ return {
 	config = function()
 		local treesitter = require("nvim-treesitter")
 
-		treesitter.install({ "javascript", "lua", "ruby", "rust", "typescript" })
+		treesitter.install({ "c", "cpp", "javascript", "lua", "ruby", "rust", "typescript" })
 
 		treesitter.setup({
 			defaults = {

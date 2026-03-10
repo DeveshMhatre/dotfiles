@@ -20,6 +20,8 @@ return {
 
 		conform.setup({
 			formatters_by_ft = {
+				c = { "clang-format" },
+				cpp = { "clang-format" },
 				css = { "prettier" },
 				html = { "prettier" },
 				javascript = { "prettier" },
