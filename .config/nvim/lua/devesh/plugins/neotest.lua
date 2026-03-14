@@ -9,11 +9,21 @@ return {
 		"olimorris/neotest-rspec",
 		"haydenmeade/neotest-jest",
 		"marilari88/neotest-vitest",
+		{
+			"fredrikaverpil/neotest-golang",
+			version = "*",
+			build = function()
+				vim.system({ "go", "install", "gotest.tools/gotestsum@latest" }):wait()
+			end,
+		},
 
 		"nvim-neotest/neotest-plenary",
 	},
 	config = function()
 		local neotest = require("neotest")
+		local go_config = {
+			runner = "gotestsum",
+		}
 
 		neotest.setup({
 			adapters = {
@@ -27,6 +37,8 @@ return {
 				}),
 				require("neotest-vitest"),
 				require("rustaceanvim.neotest"),
+				require("neotest-golang")(go_config),
+
 				require("neotest-plenary"),
 			},
 			status = { virtual_text = true },

@@ -23,6 +23,7 @@ return {
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				css = { "prettier" },
+				go = { "gofmt" },
 				html = { "prettier" },
 				javascript = { "prettier" },
 				javascriptreact = { "prettier" },
