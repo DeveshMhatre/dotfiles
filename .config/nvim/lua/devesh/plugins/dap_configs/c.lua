@@ -25,7 +25,7 @@ function M.setup()
 
 	dap.configurations.cpp = dap.configurations.c
 	-- You can add Rust here later too!
-	-- dap.configurations.rust = dap.configurations.c
+	dap.configurations.rust = dap.configurations.c
 end
 
 return M
