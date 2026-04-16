@@ -1,4 +1,4 @@
-vim.lsp.config("ruby_lsp", {
+return {
 	cmd = { "ruby-lsp" },
 	filetypes = { "ruby", "eruby" },
 	root_markers = { "Gemfile", ".git" },
@@ -9,4 +9,4 @@ vim.lsp.config("ruby_lsp", {
 		config.cmd_cwd = config.root_dir
 		return client.config.cmd_cwd == config.cmd_cwd
 	end,
-})
+}

@@ -1,4 +1,4 @@
-vim.lsp.config("vtsls", {
+return {
 	cmd = { "vtsls", "--stdio" },
 	init_options = {
 		hostInfo = "neovim",
@@ -24,4 +24,4 @@ vim.lsp.config("vtsls", {
 
 		on_dir(project_root)
 	end,
-})
+}

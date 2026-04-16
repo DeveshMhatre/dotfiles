@@ -1,5 +1,5 @@
-vim.lsp.config("stylua", {
+return {
 	cmd = { "stylua", "--lsp" },
 	filetypes = { "lua" },
 	root_markers = { ".stylua.toml", "stylua.toml", ".editorconfig" },
-})
+}
