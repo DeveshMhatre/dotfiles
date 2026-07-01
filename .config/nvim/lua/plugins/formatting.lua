@@ -26,6 +26,7 @@ require("conform").setup({
 		liquid = { "prettier" },
 		lua = { "stylua" },
 		markdown = { "prettier" },
+		nix = { "alejandra" },
 		typescript = { "prettier" },
 		typescriptreact = { "prettier" },
 		ruby = { "rubocop" },

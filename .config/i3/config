@@ -32,6 +32,8 @@ bindsym $mod+b exec --no-startup-id google-chrome-stable
 
 exec --no-startup-id nitrogen --restore &
 
+bindsym $mod+i exec --no-startup-id i3lock
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -164,7 +166,7 @@ bindsym $mod+r mode "resize"
 # }
 
 exec_always --no-startup-id killall -q
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/dotfiles/.config/polybar/launch.sh
 
 exec_always --no-startup-id picom &
 

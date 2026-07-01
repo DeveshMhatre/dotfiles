@@ -13,6 +13,7 @@ vim.lsp.enable({
 	"clangd",
 	"gopls",
 	"lua_ls",
+  "nixd",
 	"rubocop",
 	"ruby_lsp",
 	"rust_analyzer",
