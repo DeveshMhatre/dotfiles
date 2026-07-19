@@ -156,6 +156,7 @@ in {
     unzip
     thunar
     nwjs
+    brave
 
     # Neovim and dependencies
     neovim

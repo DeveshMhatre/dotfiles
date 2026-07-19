@@ -11,7 +11,10 @@
     # ./disko-config.nix
   ];
 
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot = {
+    enable = true;
+    configurationLimit = 15;
+  };
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelParams = ["nvme_core.default_ps_max_latency_us=2000"];
 
@@ -83,6 +86,12 @@
         AutoEnable = true;
       };
     };
+  };
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
   };
 
   services.blueman.enable = true;
