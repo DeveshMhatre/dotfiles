@@ -22,8 +22,13 @@ in {
 
   programs.git = {
     enable = true;
-    userName = "Devesh Mhatre";
-    userEmail = "deveshmhtr.mhatre92@gmail.com";
+
+    settings = {
+      user = {
+        name = "Devesh Mhatre";
+        email = "deveshmhtr.mhatre92@gmail.com";
+      };
+    };
 
     signing = {
       key = "FBBE1B4C0B95A377";
@@ -33,6 +38,10 @@ in {
 
   programs.ssh = {
     enable = true;
+    enableDefaultConfig = false;
+    includes = [
+      "~/.ssh/config.local"
+    ];
   };
 
   programs.bash = {
@@ -72,6 +81,8 @@ in {
   programs.tmux = {
     enable = true;
 
+    shortcut = "a";
+
     plugins = with pkgs; [
       tmuxPlugins.continuum
 
@@ -92,11 +103,6 @@ in {
     ];
 
     extraConfig = ''
-      # Send Prefix
-      set-option -g prefix C-a
-      unbind-key C-a
-      bind-key C-a send-prefix
-
       # Use Alt-arrow keys to switch panes
       bind -n M-Left select-pane -L
       bind -n M-Right select-pane -R
@@ -148,6 +154,8 @@ in {
     dunst # Notification daemon
     polybar # Status bar
     unzip
+    thunar
+    nwjs
 
     # Neovim and dependencies
     neovim
