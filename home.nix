@@ -157,6 +157,7 @@ in {
     thunar
     nwjs
     brave
+    koreader
 
     # Neovim and dependencies
     neovim
