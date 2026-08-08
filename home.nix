@@ -62,6 +62,10 @@ in {
       vim = "nvim";
     };
 
+    envExtra = ''
+      export PATH="$PATH:$HOME/go/bin"
+    '';
+
     oh-my-zsh = {
       enable = true;
       plugins = [
