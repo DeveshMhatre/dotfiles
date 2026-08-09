@@ -6,14 +6,10 @@
   dotfiles = "${config.home.homeDirectory}/dotfiles";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   configs = {
-    dunst = "dunst";
-    i3 = "i3";
+    hypr = "hypr";
     kitty = "kitty";
     lazygit = "lazygit";
     nvim = "nvim";
-    picom = "picom";
-    polybar = "polybar";
-    rofi = "rofi";
   };
 in {
   home.username = "dev";
@@ -64,6 +60,13 @@ in {
 
     envExtra = ''
       export PATH="$PATH:$HOME/go/bin"
+    '';
+
+    profileExtra = ''
+      # Launch Hyprland only on tty1 and if no other display server is running
+      if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+        exec Hyprland
+      fi
     '';
 
     oh-my-zsh = {
@@ -152,11 +155,6 @@ in {
   home.packages = with pkgs; [
     # Core Desktop & Utilities
     kitty
-    rofi # App launcher
-    nitrogen # Wallpaper setter
-    picom # Compositor
-    dunst # Notification daemon
-    polybar # Status bar
     unzip
     thunar
     nwjs
@@ -190,8 +188,6 @@ in {
 
     # Lock Screen & Status Bar
     xss-lock # Screen locker watcher
-    i3lock # Lock screen
-    i3status # Fallback status bar (referenced in your volume binds)
 
     # Audio Control
     pulseaudio # Provides 'pactl' for volume/mute controls

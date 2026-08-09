@@ -29,15 +29,7 @@
 
   i18n.defaultLocale = "en_US.UTF-8";
 
-  services.xserver = {
-    enable = true;
-    autoRepeatDelay = 200;
-    autoRepeatInterval = 35;
-
-    windowManager.i3 = {
-      enable = true;
-    };
-  };
+  programs.hyprland.enable = true;
 
   services.libinput.enable = true;
 
@@ -68,6 +60,7 @@
     vim
     wget
     gnumake
+    kitty
   ];
 
   fonts.packages = with pkgs; [
