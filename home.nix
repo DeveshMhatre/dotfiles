@@ -16,6 +16,10 @@ in {
   home.homeDirectory = "/home/dev";
   home.stateVersion = "26.05";
 
+  home.sessionVariables = {
+    POWERLINE_NERD_FONTS = "1";
+  };
+
   programs.git = {
     enable = true;
 
@@ -175,6 +179,7 @@ in {
     gopls
     lua-language-server
     nixd
+    nodejs
     rubocop
     ruby-lsp
     rustup
@@ -192,13 +197,8 @@ in {
     # Audio Control
     pulseaudio # Provides 'pactl' for volume/mute controls
 
-    # Clipboard Management
-    haskellPackages.greenclip # Provides 'greenclip' daemon and rofi integration
-
-    # Screenshots
-    maim # Screenshot tool
-    xdotool # Gets active window ID for maim
-    xclip # Copies images to clipboard
+    # Unstable Packages
+    pi-coding-agent
   ];
 
   fonts.fontconfig.enable = true;
