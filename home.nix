@@ -10,6 +10,7 @@
     kitty = "kitty";
     lazygit = "lazygit";
     nvim = "nvim";
+    rofi = "rofi";
   };
 in {
   home.username = "dev";
@@ -69,7 +70,7 @@ in {
     profileExtra = ''
       # Launch Hyprland only on tty1 and if no other display server is running
       if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
-        exec Hyprland
+        exec start-hyprland
       fi
     '';
 
@@ -164,6 +165,10 @@ in {
     nwjs
     brave
     koreader
+
+    # Hyprland
+    rofi
+    haskellPackages.greenclip # Provides 'greenclip' daemon and rofi integration
 
     # Neovim and dependencies
     neovim
