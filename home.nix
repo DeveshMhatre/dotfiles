@@ -170,6 +170,8 @@ in {
     # Hyprland
     waybar
     hyprpaper
+    hyprlock
+    hypridle
     rofi
     haskellPackages.greenclip # Provides 'greenclip' daemon and rofi integration
 
