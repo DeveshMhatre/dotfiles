@@ -11,6 +11,7 @@
     lazygit = "lazygit";
     nvim = "nvim";
     rofi = "rofi";
+    waybar = "waybar";
   };
 in {
   home.username = "dev";
@@ -167,6 +168,8 @@ in {
     koreader
 
     # Hyprland
+    waybar
+    hyprpaper
     rofi
     haskellPackages.greenclip # Provides 'greenclip' daemon and rofi integration
 
