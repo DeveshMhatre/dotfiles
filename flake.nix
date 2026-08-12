@@ -29,7 +29,7 @@
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
         modules = [
-          ({ pkgs, ... }: {
+          ({pkgs, ...}: {
             nixpkgs.overlays = [
               (final: prev: {
                 unstable = import nixpkgs-unstable {
@@ -37,6 +37,8 @@
                   config.allowUnfree = true;
                 };
                 pi-coding-agent = final.unstable.pi-coding-agent;
+                direnv = final.unstable.direnv;
+                nix-direnv = final.unstable.direnv;
               })
             ];
           })
