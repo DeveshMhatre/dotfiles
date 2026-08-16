@@ -23,7 +23,7 @@ hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 -- rofi bindings
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("rofi -modi drun,run -show drun"))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("rofi -modi drun,run -show run"))
-hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("rofi -modi 'clipboard:greenclip print' -show clipboard"))
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -p Clipboard | cliphist decode | wl-copy"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))

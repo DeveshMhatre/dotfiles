@@ -181,7 +181,8 @@ in {
     hyprlock
     hypridle
     rofi
-    haskellPackages.greenclip # Provides 'greenclip' daemon and rofi integration
+    wl-clipboard
+    cliphist
 
     # Neovim and dependencies
     neovim
