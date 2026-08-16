@@ -183,6 +183,8 @@ in {
     rofi
     wl-clipboard
     cliphist
+    grim
+    slurp
 
     # Neovim and dependencies
     neovim
