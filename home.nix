@@ -174,6 +174,7 @@ in {
     nwjs
     brave
     koreader
+    vlc
 
     # Hyprland
     waybar
