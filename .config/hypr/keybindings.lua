@@ -24,6 +24,7 @@ hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("rofi -modi drun,run -show drun"))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("rofi -modi drun,run -show run"))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -p Clipboard | cliphist decode | wl-copy"))
+hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("rofi -show power-menu -modi power-menu:rofi-power-menu"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
@@ -84,7 +85,7 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 -- File screenshots are saved to ~/Pictures/$(date)
 local shotDir = "/home/dev/Pictures"
 
-hl.bind("Print", hl.dsp.exec_cmd("grim \"" .. shotDir .. "/$(date).png\""))
+hl.bind("Print", hl.dsp.exec_cmd('grim "' .. shotDir .. '/$(date).png"'))
 hl.bind("SHIFT + Print", hl.dsp.exec_cmd('grim -g "$(slurp)" "' .. shotDir .. '/$(date).png"'))
 
 hl.bind("CTRL + Print", hl.dsp.exec_cmd("grim - | wl-copy"))

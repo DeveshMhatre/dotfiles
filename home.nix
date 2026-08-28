@@ -182,6 +182,7 @@ in {
     hyprlock
     hypridle
     rofi
+    rofi-power-menu
     wl-clipboard
     cliphist
     grim
