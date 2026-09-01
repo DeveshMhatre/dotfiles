@@ -224,6 +224,14 @@ in {
     pi-coding-agent
   ];
 
+  home.pointerCursor = {
+    name = "volantes_cursors"; # Or "volantes_light_cursors"
+    package = pkgs.volantes-cursors;
+    size = 24;
+    gtk.enable = true;
+    x11.enable = true;
+  };
+
   fonts.fontconfig.enable = true;
 
   home.file.".local/share/fonts/feather.ttf".source = "${dotfiles}/fonts/Icomoon-Feather.ttf";
