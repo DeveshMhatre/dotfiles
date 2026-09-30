@@ -188,6 +188,9 @@ in {
     grim
     slurp
     inotify-tools
+    btop
+    htop
+    bluetui
 
     # Neovim and dependencies
     neovim
@@ -221,6 +224,7 @@ in {
 
     # Audio Control
     pulseaudio # Provides 'pactl' for volume/mute controls
+    pavucontrol
 
     # Unstable Packages
     pi-coding-agent

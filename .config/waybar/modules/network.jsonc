@@ -1,8 +1,0 @@
-{
-  "custom/network": {
-    "exec": "~/.config/waybar/network-speed.sh",
-    "interval": 2,
-    "format": "{}",
-    "tooltip": false
-  }
-}

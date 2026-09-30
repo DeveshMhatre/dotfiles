@@ -1,19 +1,95 @@
-@import "tokens/colors.css";
-@import "tokens/state.css";
-@import "tokens/workspace.css";
-@import "tokens/widget.css";
-@import "tokens/batt-clock.css";
-@import "tokens/slider.css";
+@define-color highlight rgba(117, 241, 250, 1);
+@define-color dark-9 rgba(24, 24, 27, 0.2);
+@define-color dark-8 rgba(39, 39, 42, 1);
+@define-color dark-7 rgba(63, 63, 70, 1);
+@define-color dark-6 rgba(82, 82, 91, 1);
+@define-color dark-5 rgba(113, 113, 122, 1);
 
 * {
-  margin: 0;
-  padding: 0;
-  min-height: 0px;
-  border: none;
-  border-radius: 0;
-  font-family: "0xProto Nerd Font";
+  font-family: "0xProto Nerd Font Propo";
+  font-size: 16px;
 }
 
 window#waybar {
+  background-color: @dark-9;
+  color: #fff;
+}
+
+#workspaces {
+  margin-right: 10px;
+}
+
+#workspaces button {
+  padding: 3px;
+  margin: 7px 0px 7px 7px;
   background: transparent;
+  border-radius: 2px;
+  color: @highlight;
+}
+
+#workspaces button.active {
+  background: @highlight;
+  color: #000;
+  font-weight: 700;
+}
+
+#workspaces button.urgent {
+  background: rgba(227, 81, 37, 1);
+}
+
+#battery,
+#bluetooth,
+#brightness,
+#cpu,
+#memory,
+#network,
+#temperature,
+#tray,
+#volume {
+  border-radius: 8px;
+  padding: 5px 8px;
+  background: @dark-8;
+  margin: 5px 10px 5px 0px;
+}
+
+#backlight-slider,
+#pulseaudio-slider {
+  padding: 0px;
+  margin: 0px;
+  margin-left: 8px;
+}
+
+#backlight-slider slider,
+#pulseaudio-slider slider {
+  all: unset;
+  min-height: 0;
+  min-width: 0;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+#backlight-slider trough,
+#pulseaudio-slider trough {
+  min-height: 8px;
+  min-width: 75px;
+  border-radius: 5px;
+  background: @dark-7;
+}
+
+#backlight-slider highlight,
+#pulseaudio-slider highlight {
+  min-width: 10px;
+  border-radius: 5px;
+  background: @highlight;
+}
+
+tooltip {
+  background: @dark-8;
+  border-radius: 5px;
+}
+
+tooltip label {
+  color: white;
 }
