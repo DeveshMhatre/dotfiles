@@ -62,7 +62,7 @@ in {
         pbpaste = "xclip -selection clipboard -o";
         tmux = "tmux -u new-session -s lab";
         update = "sudo nixos-rebuild switch --impure --flake ~/dotfiles#itnava";
-        vim = "nvim";
+        v = "nvim";
       };
 
       envExtra = ''
@@ -187,6 +187,7 @@ in {
     cliphist
     grim
     slurp
+    inotify-tools
 
     # Neovim and dependencies
     neovim
@@ -207,6 +208,7 @@ in {
     ruby-lsp
     rustup
     stylua
+    vscode-css-languageserver
     vtsls
 
     # System & Applets

@@ -11,9 +11,10 @@ vim.diagnostic.config({
 
 vim.lsp.enable({
 	"clangd",
+	"cssls",
 	"gopls",
 	"lua_ls",
-  "nixd",
+	"nixd",
 	"rubocop",
 	"ruby_lsp",
 	"rust_analyzer",
