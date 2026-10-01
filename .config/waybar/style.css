@@ -1,9 +1,6 @@
 @define-color highlight rgba(117, 241, 250, 1);
-@define-color dark-9 rgba(24, 24, 27, 0.2);
-@define-color dark-8 rgba(39, 39, 42, 1);
-@define-color dark-7 rgba(63, 63, 70, 1);
-@define-color dark-6 rgba(82, 82, 91, 1);
-@define-color dark-5 rgba(113, 113, 122, 1);
+@define-color dark rgba(39, 39, 42, 1);
+@define-color grey rgba(63, 63, 70, 1);
 
 * {
   font-family: "0xProto Nerd Font Propo";
@@ -11,7 +8,7 @@
 }
 
 window#waybar {
-  background-color: @dark-9;
+  background-color: transparent;
   color: #fff;
 }
 
@@ -20,16 +17,16 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 3px;
+  padding: 5px;
   margin: 7px 0px 7px 7px;
-  background: transparent;
-  border-radius: 2px;
-  color: @highlight;
+  background: @dark;
+  border-radius: 20px;
+  color: #fff;
 }
 
 #workspaces button.active {
   background: @highlight;
-  color: #000;
+  color: @dark;
   font-weight: 700;
 }
 
@@ -40,15 +37,16 @@ window#waybar {
 #battery,
 #bluetooth,
 #brightness,
+#clock,
 #cpu,
 #memory,
 #network,
 #temperature,
 #tray,
 #volume {
-  border-radius: 8px;
-  padding: 5px 8px;
-  background: @dark-8;
+  border-radius: 20px;
+  padding: 5px 10px;
+  background: @dark;
   margin: 5px 10px 5px 0px;
 }
 
@@ -75,7 +73,7 @@ window#waybar {
   min-height: 8px;
   min-width: 75px;
   border-radius: 5px;
-  background: @dark-7;
+  background: @grey;
 }
 
 #backlight-slider highlight,
@@ -86,7 +84,7 @@ window#waybar {
 }
 
 tooltip {
-  background: @dark-8;
+  background: @dark;
   border-radius: 5px;
 }
 
