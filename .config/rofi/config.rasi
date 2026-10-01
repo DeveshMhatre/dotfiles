@@ -12,11 +12,12 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #111210;
-  bg-alt: #444b6a;
+  bg: rgba(39, 39, 42, 1);
+  bg-alt: rgba(63, 63, 70, 1);
+  box-alt: rgba(117, 241, 250, 1);
 
-  fg: #FFFFFF;
-  fg-alt: #787c99;
+  fg: #ffffff;
+  fg-alt: #9aa5b1;
 
   background-color: @bg;
 
@@ -28,6 +29,8 @@ configuration {
 
 window {
   width: 45%;
+  padding: 20px 0 0;
+  border-radius: 20px;
 }
 
 element {
@@ -36,7 +39,9 @@ element {
 }
 
 element selected {
-  text-color: @fg;
+  background-color: @box-alt;
+  text-color: @bg;
+  border-radius: 8px;
 }
 
 element-text {
@@ -45,24 +50,39 @@ element-text {
   vertical-align: 0.5;
 }
 
+element-text selected {
+  background-color: transparent;
+}
+
 element-icon {
   size: 30;
+}
+
+element-icon selected {
+  background-color: @box-alt;
 }
 
 entry {
   background-color: @bg-alt;
   padding: 12;
   text-color: @fg;
+  cursor: text;
 }
 
 inputbar {
   children: [prompt, entry];
+  padding: 10;
+  background-color: @bg;
 }
 
 listview {
-  background-color: @bg;
+  background-color: transparent;
   columns: 1;
   lines: 8;
+  scrollbar: true;
+  scrollbar-width: 6px;
+  scrollbar-border-radius: 3px;
+  scrollbar-handle: 0px 0px 10px 0px;
 }
 
 mainbox {
@@ -75,4 +95,11 @@ prompt {
   padding: 12 0 0 12;
   background-color: @bg-alt;
   text-color: @fg;
+}
+
+scrollbar {
+  background-color: transparent;
+  handle-color: @box-alt;
+  border-radius: 3px;
+  handle-width: 6px;
 }

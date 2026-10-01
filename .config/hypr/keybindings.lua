@@ -24,7 +24,10 @@ hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 -- rofi bindings
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("rofi -modi drun,run -show drun"))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("rofi -modi drun,run -show run"))
-hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -p Clipboard | cliphist decode | wl-copy"))
+hl.bind(
+	mainMod .. " + P",
+	hl.dsp.exec_cmd("cliphist list | rofi -dmenu -display-columns 2 -p Clipboard | cliphist decode | wl-copy")
+)
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("rofi -show power-menu -modi power-menu:rofi-power-menu"))
 
 -- Move focus with mainMod + arrow keys
