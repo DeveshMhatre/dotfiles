@@ -10,6 +10,7 @@
     kitty = "kitty";
     lazygit = "lazygit";
     nvim = "nvim";
+    oh-my-posh = "oh-my-posh";
     rofi = "rofi";
     waybar = "waybar";
   };
@@ -23,6 +24,10 @@ in {
   };
 
   programs = {
+    bat = {
+      enable = true;
+    };
+
     git = {
       enable = true;
 
@@ -58,8 +63,11 @@ in {
       syntaxHighlighting.enable = true;
 
       shellAliases = {
-        pbcopy = "xclip -selection clipboard";
-        pbpaste = "xclip -selection clipboard -o";
+        cat = "bat";
+        l = "lsd -la";
+        lg = "lazygit";
+        pbcopy = "wl-copy";
+        pbpaste = "wl-paste";
         tmux = "tmux -u new-session -s lab";
         update = "sudo nixos-rebuild switch --impure --flake ~/dotfiles#itnava";
         v = "nvim";
@@ -83,13 +91,24 @@ in {
           "sudo"
           "z"
         ];
-        theme = "avit";
+        theme = "";
       };
 
       history.size = 10000;
       history.ignoreAllDups = true;
       history.path = "$HOME/.zsh_history";
       history.ignorePatterns = ["rm *" "pkill *" "cp *"];
+    };
+
+    oh-my-posh = {
+      enable = true;
+      enableZshIntegration = true;
+      configFile = "$HOME/.config/oh-my-posh/zen.toml";
+    };
+
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
     };
 
     tmux = {
@@ -175,6 +194,9 @@ in {
     brave
     koreader
     vlc
+
+    # Terminal Utilities
+    lsd
 
     # Hyprland
     waybar
