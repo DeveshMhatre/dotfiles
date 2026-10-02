@@ -75,6 +75,7 @@ in {
 
       envExtra = ''
         export PATH="$PATH:$HOME/go/bin"
+        eval "$(devenv hook zsh)"
       '';
 
       profileExtra = ''
@@ -170,12 +171,6 @@ in {
         setw -g pane-base-index 1
       '';
     };
-
-    direnv = {
-      enable = true;
-      enableZshIntegration = true;
-      nix-direnv.enable = true;
-    };
   };
 
   xdg.configFile =
@@ -223,6 +218,7 @@ in {
     # Programming languages, LSPs, formatters and libs
     alejandra # Nix code formatter
     clang-tools
+    devenv
     gcc
     go
     gopls

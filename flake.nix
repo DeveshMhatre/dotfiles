@@ -37,8 +37,7 @@
                   config.allowUnfree = true;
                 };
                 pi-coding-agent = final.unstable.pi-coding-agent;
-                direnv = final.unstable.direnv;
-                nix-direnv = final.unstable.direnv;
+                devenv = final.unstable.devenv;
               })
             ];
           })
