@@ -12,8 +12,8 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: rgba(39, 39, 42, 1);
-  bg-alt: rgba(63, 63, 70, 1);
+  bg: rgba(0, 0, 0, 1);
+  bg-alt: rgba(54, 69, 79, 1);
   box-alt: rgba(117, 241, 250, 1);
 
   fg: #ffffff;
@@ -29,8 +29,8 @@ configuration {
 
 window {
   width: 45%;
-  padding: 20px 0 0;
-  border-radius: 20px;
+  padding: 20 0 0;
+  border-radius: 20;
 }
 
 element {
@@ -41,7 +41,7 @@ element {
 element selected {
   background-color: @box-alt;
   text-color: @bg;
-  border-radius: 8px;
+  border-radius: 8;
 }
 
 element-text {
@@ -64,6 +64,7 @@ element-icon selected {
 
 entry {
   background-color: @bg-alt;
+  border-radius: 0 20 20 0;
   padding: 12;
   text-color: @fg;
   cursor: text;
@@ -71,7 +72,7 @@ entry {
 
 inputbar {
   children: [prompt, entry];
-  padding: 10;
+  padding: 10 10 25;
   background-color: @bg;
 }
 
@@ -80,9 +81,9 @@ listview {
   columns: 1;
   lines: 8;
   scrollbar: true;
-  scrollbar-width: 6px;
-  scrollbar-border-radius: 3px;
-  scrollbar-handle: 0px 0px 10px 0px;
+  scrollbar-width: 6;
+  scrollbar-border-radius: 3;
+  scrollbar-handle: 0 0 10 0;
 }
 
 mainbox {
@@ -92,6 +93,7 @@ mainbox {
 
 prompt {
   enabled: true;
+  border-radius: 20 0 0 20;
   padding: 12 0 0 12;
   background-color: @bg-alt;
   text-color: @fg;
@@ -100,6 +102,6 @@ prompt {
 scrollbar {
   background-color: transparent;
   handle-color: @box-alt;
-  border-radius: 3px;
-  handle-width: 6px;
+  border-radius: 3;
+  handle-width: 6;
 }

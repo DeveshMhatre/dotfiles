@@ -1,10 +1,12 @@
 @define-color highlight rgba(117, 241, 250, 1);
-@define-color dark rgba(39, 39, 42, 1);
-@define-color grey rgba(63, 63, 70, 1);
+@define-color dark rgba(0, 0, 0, 1);
+@define-color grey rgba(54, 69, 79, 1);
 
 * {
   font-family: "0xProto Nerd Font Propo";
-  font-size: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  min-height: 0;
 }
 
 window#waybar {
@@ -17,6 +19,7 @@ window#waybar {
 }
 
 #workspaces button {
+  border: none;
   padding: 5px;
   margin: 7px 0px 7px 7px;
   background: @dark;
@@ -27,7 +30,6 @@ window#waybar {
 #workspaces button.active {
   background: @highlight;
   color: @dark;
-  font-weight: 700;
 }
 
 #workspaces button.urgent {
