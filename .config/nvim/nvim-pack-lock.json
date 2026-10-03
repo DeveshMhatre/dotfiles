@@ -45,6 +45,10 @@
       "rev": "54f48eb5017632d81d0fd40112065f1d062d0629",
       "src": "https://github.com/nvim-lua/lsp-status.nvim"
     },
+    "mini.pairs": {
+      "rev": "b1c5a726921b7a8c9321e9a7a208aa0571de5810",
+      "src": "https://github.com/nvim-mini/mini.pairs"
+    },
     "neotest": {
       "rev": "fd0b7986dd0ae04e38ec7dc0c78a432e3820839c",
       "src": "https://github.com/nvim-neotest/neotest"
@@ -72,10 +76,6 @@
     "nightfly": {
       "rev": "caaba387a4a50cf08791395acc4a5b7363367cff",
       "src": "https://github.com/bluz71/vim-nightfly-colors"
-    },
-    "nvim-autopairs": {
-      "rev": "59bce2eef357189c3305e25bc6dd2d138c1683f5",
-      "src": "https://github.com/windwp/nvim-autopairs"
     },
     "nvim-nio": {
       "rev": "21f5324bfac14e22ba26553caf69ec76ae8a7662",
@@ -126,10 +126,6 @@
     "trouble.nvim": {
       "rev": "bd67efe408d4816e25e8491cc5ad4088e708a69a",
       "src": "https://github.com/folke/trouble.nvim"
-    },
-    "vim-nightfly-colors": {
-      "rev": "caaba387a4a50cf08791395acc4a5b7363367cff",
-      "src": "https://github.com/bluz71/vim-nightfly-colors"
     },
     "which-key.nvim": {
       "rev": "3aab2147e74890957785941f0c1ad87d0a44c15a",
