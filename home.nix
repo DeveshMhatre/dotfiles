@@ -74,7 +74,6 @@ in {
       };
 
       envExtra = ''
-        export PATH="$PATH:$HOME/go/bin"
         eval "$(devenv hook zsh)"
       '';
 
@@ -220,13 +219,9 @@ in {
     clang-tools
     devenv
     gcc
-    go
-    gopls
     lua-language-server
     nixd
     nodejs
-    rubocop
-    ruby-lsp
     rustup
     stylua
     vscode-css-languageserver

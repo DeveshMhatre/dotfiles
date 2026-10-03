@@ -17,9 +17,6 @@ vim.pack.add({
 	},
 })
 
--- build step for neotest-golang
-vim.system({ "go", "install", "gotest.tools/gotestsum@latest" }):wait()
-
 local neotest = require("neotest")
 local go_config = {
 	runner = "gotestsum",
