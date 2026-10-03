@@ -38,6 +38,9 @@ neotest.setup({
 
 		require("neotest-plenary"),
 	},
+	discovery = {
+		enabled = false,
+	},
 	status = { virtual_text = true },
 	output = { open_on_run = true },
 	summary = {
