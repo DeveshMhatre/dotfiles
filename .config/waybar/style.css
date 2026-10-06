@@ -41,6 +41,7 @@ window#waybar {
 #brightness,
 #clock,
 #cpu,
+#keyboard-state,
 #memory,
 #network,
 #temperature,
@@ -83,6 +84,10 @@ window#waybar {
   min-width: 10px;
   border-radius: 5px;
   background: @highlight;
+}
+
+#keyboard-state label.capslock {
+  padding-right: 10px;
 }
 
 tooltip {

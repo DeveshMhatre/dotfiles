@@ -5,7 +5,8 @@
     "hyprland/submap",
     "cpu",
     "memory",
-    "temperature"
+    "temperature",
+    "keyboard-state"
   ],
   "modules-center": ["clock"],
   "modules-right": [
@@ -104,9 +105,16 @@
   },
   "tray": {
     "icon-size": 21,
-    "spacing": 10,
-    "icons": {
-      "nm-applet": ""
+    "spacing": 10
+  },
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "scrolllock": false,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "locked": "󰌾",
+      "unlocked": "󰿆"
     }
   },
   "backlight": {
