@@ -30,6 +30,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   programs.hyprland.enable = true;
+  programs.niri.enable = true;
 
   services.libinput.enable = true;
 

@@ -10,6 +10,7 @@
     kitty = "kitty";
     lazygit = "lazygit";
     nvim = "nvim";
+    niri = "niri";
     oh-my-posh = "oh-my-posh";
     rofi = "rofi";
     waybar = "waybar";
@@ -21,6 +22,8 @@ in {
 
   home.sessionVariables = {
     POWERLINE_NERD_FONTS = "1";
+    XCURSOR_THEME = "volantes_cursors";
+    XCURSOR_SIZE = "24";
   };
 
   programs = {
@@ -78,9 +81,9 @@ in {
       '';
 
       profileExtra = ''
-        # Launch Hyprland only on tty1 and if no other display server is running
+        # Launch Niri only on tty1 and if no other display server is running
         if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
-          exec start-hyprland
+          exec niri --session
         fi
       '';
 
@@ -192,9 +195,9 @@ in {
     # Terminal Utilities
     lsd
 
-    # Hyprland
+    # Wayland / compositor
     waybar
-    hyprpaper
+    swaybg
     hyprlock
     hypridle
     rofi
