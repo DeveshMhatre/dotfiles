@@ -11,8 +11,11 @@
 # `default:` (desktop plan) are ignored on laptops.
 # --------------------------------------------------------------------
 default:
+  # Added by Stasis for configuration compatibility.
+  suspend_inhibit_media [ ]
+  suspend_inhibit_apps [ ]
   # ----- Global knobs -----
-  enable_loginctl false
+  enable_loginctl_integration false
   enable_dbus_inhibit true
   pre_suspend_command None
   monitor_media true
@@ -41,7 +44,7 @@ default:
   ac:
     lock_screen:
       timeout 300
-      command "pidof hyprlock || hyprlock --no-fade-in --immediate-render"
+      command "hyprlock"
     end
 
     dpms:
@@ -57,7 +60,7 @@ default:
   battery:
     lock_screen:
       timeout 300
-      command "pidof hyprlock || hyprlock --no-fade-in --immediate-render"
+      command "hyprlock"
     end
 
     dpms:

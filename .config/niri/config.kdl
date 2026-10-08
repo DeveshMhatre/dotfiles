@@ -147,7 +147,7 @@ binds {
     Mod+B { spawn "brave"; }
 
     Mod+Alt+F { spawn "thunar"; }
-    Mod+Alt+L { spawn-sh "loginctl lock-session"; }
+    Mod+Alt+L { spawn-sh "pidof hyprlock || hyprlock"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }

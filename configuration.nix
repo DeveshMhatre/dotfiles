@@ -90,6 +90,8 @@
 
   services.blueman.enable = true;
 
+  services.upower.enable = true;
+
   environment.variables.EDITOR = "vim";
 
   security.pki.certificateFiles = [/home/dev/Projects/certs/root-CA.crt];

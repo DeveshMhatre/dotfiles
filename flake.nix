@@ -38,6 +38,7 @@
                 };
                 pi-coding-agent = final.unstable.pi-coding-agent;
                 devenv = final.unstable.devenv;
+                stasis = final.unstable.stasis;
               })
             ];
           })
