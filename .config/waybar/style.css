@@ -53,6 +53,10 @@ window#waybar {
   margin: 5px 10px 5px 0px;
 }
 
+#cpu {
+  margin-left: 10px;
+}
+
 #backlight-slider,
 #pulseaudio-slider {
   padding: 0px;

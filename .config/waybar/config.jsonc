@@ -1,8 +1,6 @@
 {
   "layer": "top",
   "modules-left": [
-    "ext/workspaces",
-    "hyprland/submap",
     "cpu",
     "memory",
     "temperature",
