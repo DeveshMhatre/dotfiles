@@ -12,6 +12,7 @@
     nvim = "nvim";
     niri = "niri";
     oh-my-posh = "oh-my-posh";
+    stasis = "stasis";
     rofi = "rofi";
     waybar = "waybar";
   };
@@ -199,7 +200,7 @@ in {
     waybar
     swaybg
     hyprlock
-    hypridle
+    stasis
     rofi
     rofi-power-menu
     wl-clipboard

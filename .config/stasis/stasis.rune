@@ -1,0 +1,69 @@
+# --------------------------------------------------------------------
+
+@author "Devesh Mhatre"
+@description "Stasis configuration file"
+
+# --------------------------------------------------------------------
+# DEFAULT (base config)
+#
+# This machine is a laptop, so the plan comes from `ac:` or `battery:`
+# depending on current power source. Blocks placed directly under
+# `default:` (desktop plan) are ignored on laptops.
+# --------------------------------------------------------------------
+default:
+  # ----- Global knobs -----
+  enable_loginctl false
+  enable_dbus_inhibit true
+  pre_suspend_command None
+  monitor_media true
+  ignore_remote_media true
+  debounce_seconds 5
+
+  # Resume from IPC pause (e.g. `stasis pause 1h`) notifications
+  notify_on_unpause true
+
+  # Per-step notifications (only if the block sets `notification`)
+  notify_before_action true
+
+  # Apps that inhibit Stasis while running (regex allowed via r"...")
+  inhibit_apps [
+    "mpv"
+    "vlc"
+    "Spotify"
+    r".*\.exe"
+    r"steam_app_.*"
+    r"firefox.*"
+  ]
+
+  # ----------------------------------------------------------------
+  # LAPTOP PLAN SOURCES (on AC)
+  # ----------------------------------------------------------------
+  ac:
+    lock_screen:
+      timeout 300
+      command "pidof hyprlock || hyprlock --no-fade-in --immediate-render"
+    end
+
+    dpms:
+      timeout 360
+      command "niri msg action power-off-monitors"
+      resume_command "niri msg action power-on-monitors"
+    end
+  end
+
+  # ----------------------------------------------------------------
+  # LAPTOP PLAN SOURCES (on battery)
+  # ----------------------------------------------------------------
+  battery:
+    lock_screen:
+      timeout 300
+      command "pidof hyprlock || hyprlock --no-fade-in --immediate-render"
+    end
+
+    dpms:
+      timeout 360
+      command "niri msg action power-off-monitors"
+      resume_command "niri msg action power-on-monitors"
+    end
+  end
+end
